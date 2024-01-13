@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import SectionTitle from "./SectionTitle";
+import { NavigateContxt } from "../Context/NavigateContext";
 
 const degree = [
     {
@@ -51,13 +53,18 @@ const skills = [
         tools:["Anaconda","PyCharm","Jupyter Notebooks","Origin","VS Code","Git","GitHub","Firebase","Tailwind CSS "]
     }
 ]
+
+
+
 const AboutMe = () => {
+    const {aboutref} = useContext(NavigateContxt) 
+    
     return (
-        <section className="section my-8">
+        <section className="section my-8" ref={aboutref}>
                 <SectionTitle>About Me</SectionTitle>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-3 mt-8">
                     <article>
-                    <h2 className="text-3xl font-bold text-green-900 mb-8">Degrees</h2>
+                    <h2 className="text-3xl font-bold text-teal-500 mb-8">Degrees</h2>
                         <ul className="list-disc space-y-6 text-[1.2rem]">
                             {
                                 degree.map(deg => <li key={deg.id}> <span className="text-2xl font-bold">{deg.title}</span> <br/> {deg.institute}</li>)
@@ -65,7 +72,7 @@ const AboutMe = () => {
                         </ul>
                     </article>
                     <article>
-                    <h2 className="text-3xl font-bold text-green-900 mb-8">Degrees</h2>
+                    <h2 className="text-3xl font-bold text-teal-500 mb-8">My Skills</h2>
                     {
                                 skills.map(skill => <div key={skill.id}> 
                                 

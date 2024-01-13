@@ -21,7 +21,7 @@ const Announcement = () => {
                 Announcement
                 </SectionTitle>
 
-               <div className="md:max-h-[200px] overflow-x-auto announce mr-6">
+               <div className="md:max-h-[210px] max-h-[450px] overflow-x-auto announce mr-6 cursor-text">
 
                {
                     annoused.map(announce => <div key={announce.id} className="p-6 border-2 rounded-md space-y-3 my-4">

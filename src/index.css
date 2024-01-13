@@ -11,13 +11,13 @@
 }
 
 .title{
-    @apply text-center text-4xl py-3 font-extrabold   text-black relative after:content-[''] after:w-16 after:rounded-md after:bg-green-900 after:h-2 after:absolute after:bottom-0 after:left-[50%] after:translate-x-[-50%]
+    @apply text-center text-4xl py-3 font-extrabold    relative after:content-[''] after:w-16 after:rounded-md after:bg-teal-500 after:h-2 after:absolute after:bottom-0 after:left-[50%] after:translate-x-[-50%]
 }
 
 
 
    .announce::-webkit-scrollbar {
-        width: 5px;
+        width: 3px;
         margin-left: 1rem;
       }
       

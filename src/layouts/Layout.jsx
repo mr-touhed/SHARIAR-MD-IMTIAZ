@@ -1,20 +1,24 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import NavigateContext from "../Context/NavigateContext";
 
 
 const Layout = () => {
     return (
-        <div className="">
+        
+        <NavigateContext>
                     <NavBar/>
                     
             <main className="mt-8">
 
-                <Outlet/>
-
+                <Outlet some="some"/>
+                
             </main>
     
             
-        </div>
+        </NavigateContext>
+        
+        
     );
 };
 
